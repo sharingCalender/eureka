@@ -10,9 +10,8 @@ spring:
     activate:
       on-profile: dev
     import: optional:configserver:http://${username}:${password}@localhost:9000
-  security:
-    username: ${security_username}
-    password: ${security_password}
+
+
 ---
 spring:
   config:
@@ -20,8 +19,6 @@ spring:
       on-profile: live
 
     import: optional:configserver:http://${secrets.username}:${secrets.password}@config-server:9000
-  security:
-    username: ${secrets.security_username}
-    password: ${secrets.security_password}
+
 
 
