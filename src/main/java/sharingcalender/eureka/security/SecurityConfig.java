@@ -19,10 +19,10 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Value("${username}")
+    @Value("${spring.security.username}")
     private String username;
 
-    @Value("${password}")
+    @Value("${spring.security.password}")
     private String password;
 
 
