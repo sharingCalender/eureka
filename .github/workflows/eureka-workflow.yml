@@ -36,7 +36,7 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/eureka
           platforms: linux/amd64
           build-args: |
-            SECRETS_USERNAME=${{secrets.usernmae}}
+            SECRETS_USERNAME=${{secrets.username}}
             SECRETS_PASSWORD=${{secrets.password}}
 
 
