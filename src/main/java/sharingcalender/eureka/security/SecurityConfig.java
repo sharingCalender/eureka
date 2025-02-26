@@ -22,6 +22,7 @@ public class SecurityConfig {
     @Value("${spring.security.username}")
     private String username;
 
+
     @Value("${spring.security.password}")
     private String password;
 
