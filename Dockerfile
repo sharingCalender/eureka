@@ -17,8 +17,14 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
+ARG SECRETS_USERNAME
+ARG SECRETS_PASSWORD
+
+ENV SPRING_CONFIG_IMPORT=optional:configserver:http://${SECRETS_USERNAME}:${SECRETS_PASSWORD}@config-server:9000
+
 COPY --from=build /app/build/libs/*.jar /app/eureka.jar
 
 
 EXPOSE 8761
+
 CMD ["java","-jar","/app/eureka.jar"]
