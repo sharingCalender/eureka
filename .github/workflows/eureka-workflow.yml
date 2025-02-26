@@ -38,6 +38,8 @@ jobs:
           build-args: |
             SECRETS_USERNAME=${{secrets.username}}
             SECRETS_PASSWORD=${{secrets.password}}
+            SECRETS_SECURITY_USERNAME=${{secrets.security_username}}
+            SECRETS_SECURITY_PASSWORD=${{secrets.security_password}}
 
 
 

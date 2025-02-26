@@ -14,6 +14,10 @@ spring:
 
 ---
 spring:
+  security:
+    username: ${secrets.security_username}
+    password: ${secrets.security_password}
+
   config:
     activate:
       on-profile: live
